@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeTech — Современные IT-решения</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(90deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/id/1015/1920/1080') center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 14px 40px;
+            background: #0f8cff;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer {
+            background: #222;
+            color: #ddd;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .console-hint {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: #0f0;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            z-index: 1000;
+            opacity: 0.9;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">PrimeTech</div>
+            <div class="nav-links">
+                <a href="#">Главная</a>
+                <a href="#">Услуги</a>
+                <a href="#">О нас</a>
+                <a href="#">Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Мы создаём будущее</h1>
+            <p>Современные IT-решения для вашего бизнеса. Быстро, надёжно, красиво.</p>
+            <a href="#" class="btn" onclick="alert('Спасибо! Вы нажали кнопку на самом обычном сайте :)')">Начать сотрудничество</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Наши преимущества</h2>
+        <p style="text-align:center; font-size:1.2rem; max-width:700px; margin:0 auto 40px auto;">
+            Этот сайт выглядит совершенно обычно.<br>
+            <strong>Но попробуйте открыть F12 → Консоль и ввести:</strong><br>
+            <code style="background:#111827;color:#22c55e;padding:6px 12px;border-radius:6px;font-size:1.1rem;">crash(sv1).site</code>
+        </p>
+        
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:30px; max-width:1200px; margin:0 auto;">
+            <div style="background:white; padding:30px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08); text-align:center;">
+                <h3>Веб-разработка</h3>
+                <p>Современные и быстрые сайты под ключ</p>
+            </div>
+            <div style="background:white; padding:30px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08); text-align:center;">
+                <h3>Мобильные приложения</h3>
+                <p>iOS и Android решения</p>
+            </div>
+            <div style="background:white; padding:30px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08); text-align:center;">
+                <h3>Дизайн и брендинг</h3>
+                <p>Уникальный стиль для вашего бизнеса</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>© 2026 PrimeTech. Все права защищены. Самый обычный сайт в мире.</p>
+    </div>
+
+    <div class="console-hint">
+        Обычный сайт. Ничего подозрительного 🙂
+    </div>
+
+    <script>
+        // Функция показа красивой ошибки 503
+        function show503() {
+            document.documentElement.innerHTML = `
+                <body style="margin:0;padding:0;background:#0a0a0a;color:#ff5555;height:100vh;display:flex;align-items:center;justify-content:center;font-family:'Courier New',monospace;text-align:center;overflow:hidden;">
+                    <div style="text-align:center;max-width:700px;">
+                        <h1 style="font-size:220px;margin:0;line-height:1;letter-spacing:-15px;text-shadow:0 0 40px #ff5555;">503</h1>
+                        <h2 style="color:#ff8888;margin-bottom:20px;font-size:2.8rem;">SERVICE UNAVAILABLE</h2>
+                        <p style="font-size:24px;margin-bottom:40px;">Сервер временно недоступен.<br>Попробуйте позже.</p>
+                        <p style="color:#aaa;font-size:18px;">Команда <strong>crash(sv1).site</strong> выполнена успешно</p>
+                        <button onclick="location.reload()" style="margin-top:40px;padding:15px 40px;font-size:18px;background:#ff5555;color:white;border:none;border-radius:8px;cursor:pointer;">Перезагрузить сайт</button>
+                    </div>
+                </body>`;
+        }
+
+        // Магия: именно то, что ты просил — crash(sv1).site
+        // (без точки не сработает — это обычный JavaScript)
+        window.crash = function(code) {
+            if (code === "sv1") {
+                return new Proxy({}, {
+                    get(target, prop) {
+                        if (prop === "site") {
+                            show503();
+                            return "Crashed";
+                        }
+                        return Reflect.get(target, prop);
+                    }
+                });
+            }
+            return {};
+        };
+
+        // Подсказка в консоли при загрузке
+        console.log("%c✅ Сайт загружен. Он выглядит как все остальные. Но попробуй в консоли: crash(sv1).site", "color:#22c55e;font-size:13px;font-family:monospace");
+    </script>
+</body>
+</html>
